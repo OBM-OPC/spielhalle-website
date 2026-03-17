@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="machine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2D1B69"/>
+      <stop offset="50%" style="stop-color:#1A1A1A"/>
+      <stop offset="100%" style="stop-color:#2D1B69"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9D4EDD"/>
+      <stop offset="100%" style="stop-color:#7B2CBF"/>
+    </linearGradient>
+  </defs>
+  <!-- Machine body -->
+  <rect x="50" y="50" width="500" height="700" rx="30" fill="url(#machine)" stroke="#9D4EDD" stroke-width="4"/>
+  <!-- Jackpot header -->
+  <rect x="70" y="70" width="460" height="100" rx="10" fill="#0D0D0D" stroke="#9D4EDD" stroke-width="3"/>
+  <text x="300" y="110" text-anchor="middle" fill="#9D4EDD" font-family="Arial" font-size="24" font-weight="bold">MEGA</text>
+  <text x="300" y="145" text-anchor="middle" fill="#FFD700" font-family="Arial" font-size="28" font-weight="bold">FORTUNE</text>
+  <!-- Screen -->
+  <rect x="80" y="190" width="440" height="300" rx="5" fill="#0a0a1a" stroke="#9D4EDD" stroke-width="2"/>
+  <!-- Jackpot symbols -->
+  <text x="150" y="380" text-anchor="middle" font-size="80" fill="#FFD700">🏆</text>
+  <text x="300" y="380" text-anchor="middle" font-size="80" fill="#9D4EDD">💎</text>
+  <text x="450" y="380" text-anchor="middle" font-size="80" fill="#FFD700">🏆</text>
+  <!-- Controls -->
+  <rect x="100" y="520" width="400" height="210" rx="10" fill="#1A1A1A" stroke="#9D4EDD" stroke-width="2"/>
+  <circle cx="300" cy="600" r="50" fill="url(#purple)"/>
+  <text x="300" y="615" text-anchor="middle" fill="#FFF" font-size="16" font-weight="bold">JACKPOT</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A1A"/>
+      <stop offset="100%" style="stop-color:#0D0D0D"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="100%" style="stop-color:#B8941F"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect x="50" y="100" width="700" height="400" rx="20" fill="none" stroke="url(#gold)" stroke-width="3" stroke-dasharray="10,10"/>
+  <text x="400" y="280" text-anchor="middle" fill="#D4AF37" font-family="Arial, sans-serif" font-size="48" font-weight="bold">🎰</text>
+  <text x="400" y="340" text-anchor="middle" fill="#D4AF37" font-family="Arial, sans-serif" font-size="24">Spielautomat</text>
+  <text x="400" y="380" text-anchor="middle" fill="#888" font-family="Arial, sans-serif" font-size="16">Platzhalterbild</text>
+</svg>

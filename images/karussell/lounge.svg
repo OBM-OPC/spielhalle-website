@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D0D0D"/>
+      <stop offset="100%" style="stop-color:#1A1A1A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg4)"/>
+  <!-- Lounge area -->
+  <g fill="#2D2D2D">
+    <!-- Couches -->
+    <rect x="100" y="350" width="300" height="100" rx="20"/>
+    <rect x="800" y="350" width="300" height="100" rx="20"/>
+    <!-- Tables -->
+    <ellipse cx="600" cy="420" rx="80" ry="30" fill="#1A1A1A" stroke="#D4AF37" stroke-width="2"/>
+  </g>
+  <!-- Drinks -->
+  <g font-size="35">
+    <text x="250" y="330">☕</text>
+    <text x="320" y="340">🥤</text>
+    <text x="850" y="335">☕</text>
+    <text x="920" y="325">🥤</text>
+    <text x="580" y="400">🍵</text>
+  </g>
+  <!-- Ambient lights -->
+  <g opacity="0.3">
+    <circle cx="200" cy="100" r="60" fill="#D4AF37"/>
+    <circle cx="600" cy="80" r="80" fill="#D4AF37"/>
+    <circle cx="1000" cy="100" r="60" fill="#D4AF37"/>
+  </g>
+  <!-- Ceiling lights -->
+  <line x1="200" y1="0" x2="200" y2="100" stroke="#D4AF37" stroke-width="2"/>
+  <line x1="600" y1="0" x2="600" y2="80" stroke="#D4AF37" stroke-width="2"/>
+  <line x1="1000" y1="0" x2="1000" y2="100" stroke="#D4AF37" stroke-width="2"/>
+  <text x="600" y="550" text-anchor="middle" fill="#D4AF37" font-family="Arial" font-size="32" font-weight="bold">☕ Gemütlicher Aufenthaltsbereich</text>
+  <text x="600" y="585" text-anchor="middle" fill="#888" font-family="Arial" font-size="16">Entspannen • Getränkeservice • Bequeme Sitzgelegenheiten</text>
+</svg>
