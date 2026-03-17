@@ -1262,6 +1262,7 @@ p {
 
 .footer-logo span {
     color: var(--color-gold);
+    display: block;
 }
 
 .footer-text {
