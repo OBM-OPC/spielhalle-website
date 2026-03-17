@@ -619,8 +619,20 @@ p {
    ======================================== */
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
+}
+
+@media (max-width: 900px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .feature-card {
@@ -667,6 +679,14 @@ p {
     justify-content: center;
     font-size: 2.5rem;
     border: 2px solid var(--color-gold);
+}
+
+.feature-card__icon--number {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-gold);
+    background: linear-gradient(135deg, var(--color-black-lighter) 0%, var(--color-black) 100%);
 }
 
 .feature-card__title {
