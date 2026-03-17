@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initActiveNavLink();
     initFormHandling();
+    initCardAnimations();
+    initStatsCounter();
 });
 
 /**
@@ -275,3 +277,78 @@ if ('IntersectionObserver' in window) {
 // Console greeting
 console.log('%c🎰 Spielhalle Frankfurt', 'font-size: 20px; font-weight: bold; color: #D4AF37;');
 console.log('%cPremium Entertainment - Jetzt optimiert!', 'font-size: 12px; color: #888;');
+
+/**
+ * Card Animations on Scroll
+ */
+function initCardAnimations() {
+    const cards = document.querySelectorAll('.feature-card, .target-card, .service-card');
+    
+    if (!cards.length) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    cards.forEach(card => observer.observe(card));
+}
+
+/**
+ * Stats Counter Animation
+ */
+function initStatsCounter() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    if (!statNumbers.length) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const text = target.textContent;
+                const hasPlus = text.includes('+');
+                const hasPercent = text.includes('%');
+                const numericValue = parseInt(text.replace(/\D/g, ''));
+                
+                if (!isNaN(numericValue)) {
+                    animateCounter(target, numericValue, hasPlus, hasPercent);
+                }
+                
+                target.classList.add('animate-in');
+                observer.unobserve(target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+    
+    statNumbers.forEach(stat => observer.observe(stat));
+}
+
+function animateCounter(element, target, hasPlus, hasPercent) {
+    let current = 0;
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        
+        let display = Math.floor(current);
+        if (hasPlus) display += '+';
+        if (hasPercent) display += '%';
+        
+        element.textContent = display;
+    }, 16);
+}
